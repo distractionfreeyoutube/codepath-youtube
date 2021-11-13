@@ -17,7 +17,7 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 - **Category:** Social Media
 - **Mobile:** This app would be primarily developed for mobile but would be just as viable on a computer.
 - **Story:** Minimizes the number of hours spent watching distracting videos by providing you with only the content you need.
-- **Market:** There are similar products on the market such as DF (Distraction Free) YouTube which removes the recommended video list and other distracting elements from the Youtube webpage. This shows that there is a need for thie kind of applications. However, there isn't a mobile app designed for this purpose. Everyone who is interested in using Youtube without being addicted to the platform can use our app.
+- **Market:** There are similar products on the market such as DF (Distraction Free) YouTube which removes the recommended video list and other distracting elements from the Youtube webpage. This shows that there is a need for this kind of application. However, there isn't a mobile app designed for this purpose. Everyone who is interested in using Youtube without being addicted to the platform can use our app.
 - **Habit:** The frequency of using the app varies from user to user.
 - **Scope:** We will start by letting users who would like to reduce their screentime to use our app. Then, the app can be expanded to an app that promotes real-life interactions and intentional living by reducing social media usage.
 
