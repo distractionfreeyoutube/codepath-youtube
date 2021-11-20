@@ -89,7 +89,16 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### Post
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | author        | Pointer to User| image author |
+   | message       | String   | message content by author |
+   | commentsCount | Number   | number of comments that has been posted to an image |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
