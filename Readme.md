@@ -89,16 +89,67 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
+#### User
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | id            | String   | unique id for the user (default field) |
+   | subscriptions | Pointer to array of Channels | the channels a user is subscribed to |
+   | communities   | Pointer to array of Communities  | the communities the user is a part of |
+   | timer setting | Number   | number of minutes user sets to watch videos |
+   
+#### Channel
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | id            | String   | unique id for the channel (default field) |
+   | videos        | Pointer to array of Videos| the videos posted on the channel |
+   | createdAt     | DateTime | date when channel is created (default field) |
+   
+#### Video
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the channel video (default field) |
+   | channel       | Pointer to Channel | channel that video comes from |
+   | title         | String   | video title |
+   | thumbnail     | File     | video thumbnail image |
+   | comments      | Pointer to array of Comments | comments of the video |
+   | createdAt     | DateTime | date when video is created (default field) |
+   | updatedAt     | DateTime | date when video is last updated (default field) |
+   
+#### Comment
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the comment (default field) |
+   | author        | Pointer to User| comment author |
+   | message       | String   | comment content by author |
+   | replies       | Pointer to array of Comments | replies to author's comment |
+   | createdAt     | DateTime | date when comment is created (default field) |
+   | updatedAt     | DateTime | date when comment is last updated (default field) |
+   
+#### Community
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | id            | String   | unique id for the community (default field) |
+   | members       | Pointer to array of Users | users in the community |
+   | posts         | Pointer to array of Posts | community posts|
+   | createdAt     | DateTime | date when community is created (default field) |
+
 #### Post
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | objectId      | String   | unique id for the user post (default field) |
-   | author        | Pointer to User| image author |
+   | objectId      | String   | unique id for the community post (default field) |
+   | author        | Pointer to User| post author |
+   | community     | Pointer to Community| community that post is created in |
    | message       | String   | message content by author |
-   | commentsCount | Number   | number of comments that has been posted to an image |
+   | replies       | Pointer to array of Posts | posts used to comment on original post |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
+   
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
