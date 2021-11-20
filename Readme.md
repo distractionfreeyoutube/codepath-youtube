@@ -161,29 +161,32 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 
 #### List of network requests by screen
    - Home Feed Screen
-      - (Read/GET) Query all posts where user is author
+      - (Read/GET) Query all videos of each channel the user is subscribed to
          ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
+         let query = PFQuery(className:"Video")
+         query.whereKey("channel", containedIn: currentUser.subscriptions)
          query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+         query.findObjectsInBackground { (videos: [PFObject]?, error: Error?) in
             if let error = error { 
                print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
+            } else if let videos = videos {
+               print("Successfully retrieved \(videos.count) videos.")
+           // TODO: Do something with videos...
             }
          }
          ```
-      - (Create/POST) Create a new like on a post
-      - (Delete) Delete existing like
-      - (Create/POST) Create a new comment on a post
-      - (Delete) Delete existing comment
-   - Create Post Screen
-      - (Create/POST) Create a new post object
+      - (Create/POST) Create a new comment on a video
+      - (Delete) Delete existing user comment
+   - Join Community Screen
+      - (Read/GET) Query all communities associated with channels user is subscribed to
+   - Community Screen
+      - (Create/POST) Create a new post in this community
+      - (Update/PUT) Update user post in the community
+      - (Delete) Delete existing user post in this community
    - Profile Screen
       - (Read/GET) Query logged in user object
-      - (Update/PUT) Update user profile image
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+      - (Read/GET) Query all videos of each channel the user is subscribed to
+      - (Update/PUT) Update channels user is subscribed to
+      - (Update/PUT) Update user preference of timer duration
+      
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
