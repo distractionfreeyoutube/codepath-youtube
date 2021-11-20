@@ -157,6 +157,17 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
    
+#### Subscriptions
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the channel (default field) |
+   | channelName   | String   | name of channel |
+   | pfp           | File     | profile picture of the channel |
+   | subscriberCount | Number | number of subscribers |
+   | isSubscribed  | Boolean | true if the user is subscribed, false if the user is subscribed previously but is no longer subscribed |
+   
+   
 ### Networking
 
 #### List of network requests by screen
