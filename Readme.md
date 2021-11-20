@@ -189,4 +189,19 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
       - (Update/PUT) Update channels user is subscribed to
       - (Update/PUT) Update user preference of timer duration
       
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+##### YouTube API
+- Base URL - [https://www.googleapis.com/youtube/v3](https://www.googleapis.com/youtube/v3)
+
+   HTTP Verb | Endpoint | Description
+   ----------|----------|------------
+    `GET`    | /channels | returns a collection of zero or more channel resources that match the request criteria
+    `GET`    | /commentThreads | returns a list of comment threads that match the API request parameters
+    `POST`   | /commentThreads | creates a new top-level comment
+    `GET`    | /comments | returns a list of comments that match the API request parameters
+    `POST`   | /comments | creates a reply to an existing comment
+    `PUT`    | /comments | modifies a comment
+    `DELETE` | /comments | deletes a comment
+    `GET`    | /subscriptions | returns subscription resources that match the API request criteria
+    `POST`   | /subscriptions | adds a subscription for the authenticated user's channel
+    `DELETE` | /subscriptions | deletes a subscription 
+    `GET`    | /videos | returns a list of videos that match the API request parameters
