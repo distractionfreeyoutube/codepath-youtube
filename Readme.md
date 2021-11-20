@@ -128,6 +128,13 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
    | replies       | Pointer to array of Comments | replies to author's comment |
    | createdAt     | DateTime | date when comment is created (default field) |
    | updatedAt     | DateTime | date when comment is last updated (default field) |
+
+#### Timer
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | duration      | Number   | duration set to watch videos after opening app |
+   | sound         | File     | audio file for alarm sound |
    
 #### Community
 
