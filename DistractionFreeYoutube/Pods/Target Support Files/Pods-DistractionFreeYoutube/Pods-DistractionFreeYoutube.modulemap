@@ -1,0 +1,6 @@
+framework module Pods_DistractionFreeYoutube {
+  umbrella header "Pods-DistractionFreeYoutube-umbrella.h"
+
+  export *
+  module * { export * }
+}
