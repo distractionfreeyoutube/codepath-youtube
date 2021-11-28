@@ -24,6 +24,13 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
 
         // Add the sign-in button.
         view.addSubview(signInButton)
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Set contraints for the sign-in button
+        signInButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        signInButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        signInButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        signInButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -140).isActive = true
 
         // Add a UITextView to display output.
         output.frame = view.bounds
@@ -33,6 +40,12 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         output.isHidden = true
         view.addSubview(output);
     }
+    
+    // Restrict orientation change
+    override var shouldAutorotate: Bool {
+        return false
+    }
+
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
