@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,28 +11,31 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DistractionFreeYoutube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="DistractionFreeYoutube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOI-L7-b1Q">
-                                <rect key="frame" x="72" y="614" width="270" height="48"/>
+                                <rect key="frame" x="72" y="530" width="231" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="I0A-NM-9af"/>
+                                </constraints>
                                 <string key="text">A distraction-free 
 experience of Youtube</string>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open-doodles-meditating-1" translatesAutoresizingMaskIntoConstraints="NO" id="Afb-oQ-53m">
-                                <rect key="frame" x="82" y="310" width="250" height="191"/>
+                                <rect key="frame" x="62.666666666666657" y="246" width="249.99999999999997" height="191"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Fy4-9w-J1p"/>
                                     <constraint firstAttribute="height" constant="191" id="aA8-O1-T3Z"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illustration by Pablo Marquez from Ouch!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F50-09-WhJ">
-                                <rect key="frame" x="134.5" y="517" width="145" height="37"/>
+                                <rect key="frame" x="115" y="453" width="145" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="iuc-f7-ZQS"/>
                                     <constraint firstAttribute="width" constant="145" id="jBp-hp-Yij"/>
@@ -46,7 +49,7 @@ experience of Youtube</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NOI-L7-b1Q" secondAttribute="trailing" constant="72" id="5bR-4F-Clw"/>
-                            <constraint firstItem="NOI-L7-b1Q" firstAttribute="top" secondItem="F50-09-WhJ" secondAttribute="bottom" constant="60" id="CWn-34-Mdp"/>
+                            <constraint firstItem="NOI-L7-b1Q" firstAttribute="top" secondItem="F50-09-WhJ" secondAttribute="bottom" constant="40" id="CWn-34-Mdp"/>
                             <constraint firstItem="Afb-oQ-53m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eyt-ML-Kk3"/>
                             <constraint firstItem="F50-09-WhJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OgN-E6-lr7"/>
                             <constraint firstItem="Afb-oQ-53m" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="269" id="bOe-GW-DvD"/>
@@ -57,14 +60,111 @@ experience of Youtube</string>
                             <constraint firstItem="NOI-L7-b1Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="xln-6C-cBO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="dTW-uP-9pD" kind="presentation" identifier="loginSegue" id="a7O-Fw-gGa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-10.144927536231885" y="63.616071428571423"/>
         </scene>
+        <!--Subscription View Controller-->
+        <scene sceneID="dN5-jJ-dSg">
+            <objects>
+                <viewController id="tuM-xs-tET" customClass="SubscriptionViewController" customModule="DistractionFreeYoutube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mro-Na-xxT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uzg-Dj-AUI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mE8-21-6NN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dY1-5F-if6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2815.1999999999998" y="-166.25615763546799"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="OeI-7H-2Xw">
+            <objects>
+                <viewController id="WXm-Y6-EBm" customClass="TimerViewController" customModule="DistractionFreeYoutube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oKY-sO-fAr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2Bi-4L-ZY8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JLO-lU-WQm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJ4-xt-Qhs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2815.1999999999998" y="550.49261083743841"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IkJ-ha-Lk8">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="dTW-uP-9pD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y4R-TD-Xpd">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.54901960780000003" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.54901960780000003" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SdN-9y-UVF" kind="relationship" relationship="viewControllers" id="XPP-WD-gGs"/>
+                        <segue destination="K55-iY-on0" kind="relationship" relationship="viewControllers" id="dTy-cH-pFh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRf-dk-Qoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="64"/>
+        </scene>
+        <!--Subscription-->
+        <scene sceneID="Ise-uR-kz6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SdN-9y-UVF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Subscription" image="video" catalog="system" landscapeImage="video" largeContentSizeImage="video" selectedImage="video" id="rae-wZ-abA">
+                        <color key="badgeColor" red="1" green="0.54901960780000003" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yiB-YF-3J8">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tuM-xs-tET" kind="relationship" relationship="rootViewController" id="H42-ng-qjF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wf-Ev-5GF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.8" y="-166.25615763546799"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="hU6-XX-fmV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K55-iY-on0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" landscapeImage="timer" largeContentSizeImage="timer" selectedImage="timer" id="DGl-VT-eZk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2eu-Ad-qgW">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WXm-Y6-EBm" kind="relationship" relationship="rootViewController" id="grd-2Y-aJN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9V-Cg-5wd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.8" y="550.49261083743841"/>
+        </scene>
     </scenes>
     <resources>
         <image name="open-doodles-meditating-1" width="3596" height="2763"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
+        <image name="video" catalog="system" width="128" height="83"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
