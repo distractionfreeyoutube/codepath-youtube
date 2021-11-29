@@ -10,6 +10,7 @@
 		831A6E59D3AE37F321F7C03B /* Pods_DistractionFreeYoutube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0E7EBA521F9F7D9516EB63 /* Pods_DistractionFreeYoutube.framework */; };
 		865A5F2927541C53007882AB /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865A5F2827541C53007882AB /* SubscriptionViewController.swift */; };
 		865A5F2B27541C66007882AB /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865A5F2A27541C66007882AB /* TimerViewController.swift */; };
+		865A5F2D2754426F007882AB /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865A5F2C2754426F007882AB /* VideoTableViewCell.swift */; };
 		866E05D4274958C700537C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866E05D3274958C700537C8D /* AppDelegate.swift */; };
 		866E05D6274958C700537C8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866E05D5274958C700537C8D /* SceneDelegate.swift */; };
 		866E05D8274958C700537C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866E05D7274958C700537C8D /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		2A0E7EBA521F9F7D9516EB63 /* Pods_DistractionFreeYoutube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistractionFreeYoutube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		865A5F2827541C53007882AB /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		865A5F2A27541C66007882AB /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		865A5F2C2754426F007882AB /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		866E05D0274958C700537C8D /* DistractionFreeYoutube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistractionFreeYoutube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		866E05D3274958C700537C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		866E05D5274958C700537C8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				866E05E1274958C700537C8D /* Info.plist */,
 				865A5F2827541C53007882AB /* SubscriptionViewController.swift */,
 				865A5F2A27541C66007882AB /* TimerViewController.swift */,
+				865A5F2C2754426F007882AB /* VideoTableViewCell.swift */,
 			);
 			path = DistractionFreeYoutube;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				866E05D4274958C700537C8D /* AppDelegate.swift in Sources */,
 				865A5F2927541C53007882AB /* SubscriptionViewController.swift in Sources */,
 				866E05D6274958C700537C8D /* SceneDelegate.swift in Sources */,
+				865A5F2D2754426F007882AB /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GT4P8AT395;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DistractionFreeYoutube/Info.plist;
@@ -420,6 +425,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GT4P8AT395;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DistractionFreeYoutube/Info.plist;

@@ -9,36 +9,83 @@ import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
 
-class SubscriptionViewController: UIViewController {
-    
+class SubscriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var user: GIDGoogleUser!
+    var channels = [[String:Any]]()
+    var channelsId = [String]()
+    var videosName = [String]()
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var testLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        retriveSubscription()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        retriveSubscriptions()
     }
     
-    // Perform network request
-    func retriveSubscription() {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoTableViewCell") as! VideoTableViewCell
+        return cell
+    }
+    
+    func retriveSubscriptions() {
         let accessToken = user.authentication.accessToken
-        let url = URL(string: "https://youtube.googleapis.com/youtube/v3/subscriptions?part=contentDetails&part=id&part=snippet&mine=true&key=AIzaSyCAnTNDn5B2y0PQTNi1OBYzzbHB_nGIC2s&access_token=\(accessToken ?? "")")!
+        let url = URL(string: "https://youtube.googleapis.com/youtube/v3/subscriptions?part=snippet&part=contentDetails&mine=true&key=AIzaSyCAnTNDn5B2y0PQTNi1OBYzzbHB_nGIC2s&access_token=\(accessToken ?? "")")!
+        
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-        let task = session.dataTask(with: request) { (data, response, error) in
+        let task = session.dataTask(with: request) { [self] (data, response, error) in
              // This will run when the network request returns
              if let error = error {
-                    print(error.localizedDescription)
+                 print(error.localizedDescription)
              } else if let data = data {
-                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                    print(dataDictionary)
-
-                    // TODO: Get the array of movies
-                    // TODO: Store the movies in a property to use elsewhere
-                    // TODO: Reload your table view data
-
+                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                 
+                 self.channels = dataDictionary["items"] as! [[String:Any]]
+                 
+                 for channel in self.channels {
+                     let channelsSnippet = channel["snippet"] as! [String:Any]
+                     let channelsResource = channelsSnippet["resourceId"] as! [String:Any]
+                     self.channelsId.append(channelsResource["channelId"] as! String)
+                 }
+             retrieveVideos()
              }
         }
         task.resume()
+    }
+    
+    func retrieveVideos() {
+        for channelsId in channelsId {
+            let url = URL(string: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCAnTNDn5B2y0PQTNi1OBYzzbHB_nGIC2s&channelId=\(channelsId)&part=snippet,id&order=date&maxResults=5")!
+            let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+            let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+            let task = session.dataTask(with: request) { [self] (data, response, error) in
+                 // This will run when the network request returns
+                 if let error = error {
+                     print(error.localizedDescription)
+                 } else if let data = data {
+                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                     let videosItems = dataDictionary["items"] as! [[String:Any]]
+                     for videosItem in videosItems {
+                         let videosSnippet = videosItem["snippet"] as! [String:Any]
+                         self.videosName.append(videosSnippet["title"] as! String)
+                     }
+
+                 }
+                for videosName in videosName {
+                    testLabel.text = (testLabel.text ?? "") + videosName + "\n"
+                }
+            }
+            task.resume()
+        }
     }
     
 
