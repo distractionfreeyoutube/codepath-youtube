@@ -87,7 +87,6 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 <img src="https://i.imgur.com/xFGqpEG.jpg" width="200"/>
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 #### User
 
