@@ -27,19 +27,26 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 
 **Required Must-have Stories**
 
-* User logs in to their Youtube account
-* User accesses their unwatched subscription content
-* User watches the videos
-* User sets the watch time limit
-* User swipe to unsubscribe/ remove video from list
-* Notification when time's up
-* Up next playlist
+- [x] User logs in to their Youtube account
+- [x] User accesses their unwatched subscription content
+- [ ] Display unwatched subscription content in table view
+- [ ] User watches the videos
+- [ ] User sets the watch time limit
+- [ ] User swipe to unsubscribe/ remove video from list
+- [ ] Notification when time's up
+- [ ] Up next playlist
 
 **Optional Nice-to-have Stories**
 
 * Profile Page
 * Settings (colour scheme, etc.)
 * Chat window/ community page to interact with fellow users who are trying to recover from Youtube addiction/ reduce screentime
+
+#### Progress
+
+User can login to their Google/ Youtube account, and they can view the titles of the videos in their subscription box. The screen for timer has also been created.
+
+![](https://i.imgur.com/s986e4w.gif)
 
 ### 2. Screen Archetypes
 
