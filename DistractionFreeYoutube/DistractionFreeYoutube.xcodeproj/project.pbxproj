@@ -122,6 +122,8 @@
 			dependencies = (
 			);
 			name = DistractionFreeYoutube;
+			packageProductDependencies = (
+			);
 			productName = DistractionFreeYoutube;
 			productReference = 866E05D0274958C700537C8D /* DistractionFreeYoutube.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +151,8 @@
 				Base,
 			);
 			mainGroup = 866E05C7274958C700537C8D;
+			packageReferences = (
+			);
 			productRefGroup = 866E05D1274958C700537C8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
