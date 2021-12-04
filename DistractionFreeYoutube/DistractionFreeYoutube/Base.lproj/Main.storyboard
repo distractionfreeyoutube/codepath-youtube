@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="DistractionFreeYoutube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOI-L7-b1Q">
-                                <rect key="frame" x="72" y="530" width="231" height="48"/>
+                                <rect key="frame" x="72" y="508" width="270" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="I0A-NM-9af"/>
                                 </constraints>
@@ -28,14 +28,14 @@ experience of Youtube</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open-doodles-meditating-1" translatesAutoresizingMaskIntoConstraints="NO" id="Afb-oQ-53m">
-                                <rect key="frame" x="62.666666666666657" y="246" width="249.99999999999997" height="191"/>
+                                <rect key="frame" x="82" y="224" width="250" height="191"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Fy4-9w-J1p"/>
                                     <constraint firstAttribute="height" constant="191" id="aA8-O1-T3Z"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illustration by Pablo Marquez from Ouch!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F50-09-WhJ">
-                                <rect key="frame" x="115" y="453" width="145" height="37"/>
+                                <rect key="frame" x="134.66666666666666" y="431" width="144.99999999999997" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="iuc-f7-ZQS"/>
                                     <constraint firstAttribute="width" constant="145" id="jBp-hp-Yij"/>
@@ -53,7 +53,7 @@ experience of Youtube</string>
                             <constraint firstItem="Afb-oQ-53m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eyt-ML-Kk3"/>
                             <constraint firstItem="F50-09-WhJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OgN-E6-lr7"/>
                             <constraint firstItem="Afb-oQ-53m" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="269" id="bOe-GW-DvD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NOI-L7-b1Q" secondAttribute="bottom" constant="200" id="cvf-3E-8C5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NOI-L7-b1Q" secondAttribute="bottom" constant="180" id="cvf-3E-8C5"/>
                             <constraint firstItem="Afb-oQ-53m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g1k-0G-QD3"/>
                             <constraint firstItem="F50-09-WhJ" firstAttribute="top" secondItem="Afb-oQ-53m" secondAttribute="bottom" constant="16" id="srB-gp-BYU"/>
                             <constraint firstItem="NOI-L7-b1Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vPb-qe-zps"/>
@@ -73,14 +73,14 @@ experience of Youtube</string>
             <objects>
                 <viewController id="tuM-xs-tET" customClass="SubscriptionViewController" customModule="DistractionFreeYoutube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mro-Na-xxT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VOD-Hf-LRb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tX4-zu-683">
-                                    <rect key="frame" x="0.0" y="197.33333206176758" width="375" height="529"/>
+                                    <rect key="frame" x="0.0" y="178.66666828502309" width="414" height="529"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -88,10 +88,10 @@ experience of Youtube</string>
                                 </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="130" id="VLz-NA-gyc">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="130"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VLz-NA-gyc" id="caX-6e-4fn" customClass="VideoTableViewCell" customModule="DistractionFreeYoutube" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qy-aG-wxI">
@@ -131,7 +131,7 @@ experience of Youtube</string>
             <objects>
                 <viewController id="WXm-Y6-EBm" customClass="TimerViewController" customModule="DistractionFreeYoutube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oKY-sO-fAr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="2Bi-4L-ZY8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -172,7 +172,7 @@ experience of Youtube</string>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yiB-YF-3J8">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -191,7 +191,7 @@ experience of Youtube</string>
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" landscapeImage="timer" largeContentSizeImage="timer" selectedImage="timer" id="DGl-VT-eZk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2eu-Ad-qgW">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -205,7 +205,7 @@ experience of Youtube</string>
         </scene>
     </scenes>
     <resources>
-        <image name="open-doodles-meditating-1" width="3596" height="2763"/>
+        <image name="open-doodles-meditating-1" width="120" height="92"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <image name="video" catalog="system" width="128" height="83"/>
         <systemColor name="systemBackgroundColor">

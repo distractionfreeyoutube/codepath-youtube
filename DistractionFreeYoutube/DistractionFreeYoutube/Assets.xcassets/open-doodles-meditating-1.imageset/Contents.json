@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "open-doodles-meditating-1.png",
+      "filename" : "open-doodles-meditating@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "open-doodles-meditating@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "open-doodles-meditating@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
