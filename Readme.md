@@ -42,7 +42,13 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 * Settings (colour scheme, etc.)
 * Chat window/ community page to interact with fellow users who are trying to recover from Youtube addiction/ reduce screentime
 
-#### Progress
+#### Progress 2
+
+User can set timer for watching videos on their Youtube account.
+
+![](https://i.imgur.com/ogzuhDX.gif)
+
+#### Progress 1
 
 User can login to their Google/ Youtube account, and they can view the titles of the videos in their subscription box. The screen for timer has also been created.
 
