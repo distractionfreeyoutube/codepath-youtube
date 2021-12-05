@@ -8,15 +8,16 @@
 import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
+import AlamofireImage
 
 class SubscriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var user: GIDGoogleUser!
-    var channels = [[String:Any]]()
-    var channelsId = [String]()
-    var videosName = [String]()
+    var channelsIds = [String]()
+    var videosNames = [String]()
+    var channelNames = [String]()
+    var thumbnailLinks = [String]()
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,71 +25,120 @@ class SubscriptionViewController: UIViewController, UITableViewDataSource, UITab
         tableView.dataSource = self
         tableView.delegate = self
         
-        retriveSubscriptions()
+        if #available(iOS 15.0, *) {
+            Task {
+                
+                do {
+                    channelsIds = try await getSubscriptions()
+                    videosNames = try await getVideos()
+                    
+//                    for channelsId in channelsIds {
+//                        print(channelsId)
+//                    }
+//                    
+//                    for videosName in videosNames {
+//                        print(videosName)
+//                    }
+                    
+                    for thumbnailLinks in thumbnailLinks {
+                        print(thumbnailLinks)
+                    }
+                    
+                    self.tableView.reloadData()
+                    
+                } catch {
+                    print("Request failed with error: \(error)")
+                }
+                
+            }
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return videosNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoTableViewCell") as! VideoTableViewCell
+        let videoName = videosNames[indexPath.row]
+        cell.videoNameLabel.text = videoName
+        
+        let channelName = channelNames[indexPath.row]
+        cell.channelNameLabel.text = channelName
+        
+        let thumbnailURL = URL(string: thumbnailLinks[indexPath.row])
+        cell.thumbnailImageView.af.setImage(withURL: thumbnailURL!)
+        
+        tableView.rowHeight = 90
+        
         return cell
     }
     
-    func retriveSubscriptions() {
+    @available(iOS 15.0.0, *)
+    func getSubscriptions() async throws -> [String] {
+        var returnChannelsId = [String]()
+
         let accessToken = user.authentication.accessToken
-        let url = URL(string: "https://youtube.googleapis.com/youtube/v3/subscriptions?part=snippet&part=contentDetails&mine=true&key=AIzaSyCAnTNDn5B2y0PQTNi1OBYzzbHB_nGIC2s&access_token=\(accessToken ?? "")")!
+        guard let url = URL(string: "https://youtube.googleapis.com/youtube/v3/subscriptions?part=snippet&part=contentDetails&mine=true&key=AIzaSyCAnTNDn5B2y0PQTNi1OBYzzbHB_nGIC2s&access_token=\(accessToken ?? "")") else {
+            throw SubscriptionsFetchError.invalidURL
+        }
+
+        let (data, _) = try await URLSession.shared.data(from: url)
+
+        let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
         
-        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-        let task = session.dataTask(with: request) { [self] (data, response, error) in
-             // This will run when the network request returns
-             if let error = error {
-                 print(error.localizedDescription)
-             } else if let data = data {
-                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                 
-                 self.channels = dataDictionary["items"] as! [[String:Any]]
-                 
-                 for channel in self.channels {
-                     let channelsSnippet = channel["snippet"] as! [String:Any]
-                     let channelsResource = channelsSnippet["resourceId"] as! [String:Any]
-                     self.channelsId.append(channelsResource["channelId"] as! String)
-                 }
-             retrieveVideos()
+//        print(dataDictionary)
+        
+        let channels = dataDictionary["items"] as! [[String: Any]]
+
+         for channel in channels {
+             let channelsSnippet = channel["snippet"] as! [String:Any]
+             let channelsResource = channelsSnippet["resourceId"] as! [String:Any]
+             returnChannelsId.append(channelsResource["channelId"] as! String)
+             
+             let channelsTitle = channelsSnippet["title"] as! String
+             for _ in 1...5 {
+                 self.channelNames.append(channelsTitle);
              }
-        }
-        task.resume()
+         }
+
+        return returnChannelsId
     }
     
-    func retrieveVideos() {
-        for channelsId in channelsId {
-            let url = URL(string: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCAnTNDn5B2y0PQTNi1OBYzzbHB_nGIC2s&channelId=\(channelsId)&part=snippet,id&order=date&maxResults=5")!
-            let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-            let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-            let task = session.dataTask(with: request) { [self] (data, response, error) in
-                 // This will run when the network request returns
-                 if let error = error {
-                     print(error.localizedDescription)
-                 } else if let data = data {
-                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                     let videosItems = dataDictionary["items"] as! [[String:Any]]
-                     for videosItem in videosItems {
-                         let videosSnippet = videosItem["snippet"] as! [String:Any]
-                         self.videosName.append(videosSnippet["title"] as! String)
-                     }
-
-                 }
-                for videosName in videosName {
-                    testLabel.text = (testLabel.text ?? "") + videosName + "\n"
-                }
+    @available(iOS 15.0.0, *)
+    func getVideos() async throws -> [String] {
+        var returnVideosName = [String]()
+        
+        for channelsId in channelsIds {
+            guard let url = URL(string: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCAnTNDn5B2y0PQTNi1OBYzzbHB_nGIC2s&channelId=\(channelsId)&part=snippet,id&order=date&maxResults=5") else {
+                throw VideoFetchError.invalidURL
             }
-            task.resume()
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+            
+            let videosItems = dataDictionary["items"] as! [[String:Any]]
+            for videosItem in videosItems {
+                let videosSnippet = videosItem["snippet"] as! [String:Any]
+                returnVideosName.append(videosSnippet["title"] as! String)
+                
+                let videosThumbnail = videosSnippet["thumbnails"] as! [String:Any]
+                let videoThumbnailDefault = videosThumbnail["default"] as! [String:Any]
+                thumbnailLinks.append(videoThumbnailDefault["url"] as! String)
+            }
         }
+        return returnVideosName
     }
     
-
+    enum SubscriptionsFetchError: Error {
+        case invalidURL
+    }
+    
+    enum VideoFetchError: Error {
+        case invalidURL
+    }
+    
     /*
     // MARK: - Navigation
 

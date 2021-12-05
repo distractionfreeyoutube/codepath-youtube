@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,17 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="open-doodles-meditating-1" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-1r-J5I">
-                                <rect key="frame" x="60" y="278" width="294" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open-doodles-meditating-1" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-ah-CzB">
+                                <rect key="frame" x="82" y="288" width="250" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Ur3-FR-3gf"/>
+                                    <constraint firstAttribute="height" constant="191" id="kqb-u2-jas"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gDy-1r-J5I" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MRx-cG-bV6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gDy-1r-J5I" secondAttribute="bottom" constant="334" id="UV9-Ja-XJu"/>
-                            <constraint firstItem="gDy-1r-J5I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="jwU-Ve-EKU"/>
-                            <constraint firstItem="gDy-1r-J5I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="zFz-dR-xft"/>
+                            <constraint firstItem="pwW-ah-CzB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="244" id="L0r-Pf-R8h"/>
+                            <constraint firstItem="pwW-ah-CzB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="X55-5l-RsP"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		831A6E59D3AE37F321F7C03B /* Pods_DistractionFreeYoutube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0E7EBA521F9F7D9516EB63 /* Pods_DistractionFreeYoutube.framework */; };
+		86007C17275C757000A527CA /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 86007C16275C757000A527CA /* AlamofireImage */; };
 		865A5F2927541C53007882AB /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865A5F2827541C53007882AB /* SubscriptionViewController.swift */; };
 		865A5F2B27541C66007882AB /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865A5F2A27541C66007882AB /* TimerViewController.swift */; };
 		865A5F2D2754426F007882AB /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865A5F2C2754426F007882AB /* VideoTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831A6E59D3AE37F321F7C03B /* Pods_DistractionFreeYoutube.framework in Frameworks */,
+				86007C17275C757000A527CA /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +125,7 @@
 			);
 			name = DistractionFreeYoutube;
 			packageProductDependencies = (
+				86007C16275C757000A527CA /* AlamofireImage */,
 			);
 			productName = DistractionFreeYoutube;
 			productReference = 866E05D0274958C700537C8D /* DistractionFreeYoutube.app */;
@@ -152,6 +155,7 @@
 			);
 			mainGroup = 866E05C7274958C700537C8D;
 			packageReferences = (
+				86007C15275C757000A527CA /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 866E05D1274958C700537C8D /* Products */;
 			projectDirPath = "";
@@ -474,6 +478,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86007C15275C757000A527CA /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86007C16275C757000A527CA /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86007C15275C757000A527CA /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 866E05C8274958C700537C8D /* Project object */;
 }
