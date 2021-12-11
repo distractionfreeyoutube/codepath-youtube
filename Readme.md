@@ -29,10 +29,10 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 
 - [x] User logs in to their Youtube account
 - [x] User accesses their unwatched subscription content
-- [ ] Display unwatched subscription content in table view
+- [x] Display unwatched subscription content in table view
 - [ ] User watches the videos
 - [x] User sets the watch time limit
-- [ ] User swipe to unsubscribe/ remove video from list
+- [x] User swipe to unsubscribe/ remove video from list
 - [ ] Notification when time's up
 - [ ] Up next playlist
 
@@ -41,6 +41,12 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 * Profile Page
 * Settings (colour scheme, etc.)
 * Chat window/ community page to interact with fellow users who are trying to recover from Youtube addiction/ reduce screentime
+
+#### Progress 3
+
+User can access subscription videos and delete them.
+
+![](https://i.imgur.com/7cYcB31.gif)
 
 #### Progress 2
 
