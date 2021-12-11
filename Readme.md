@@ -29,10 +29,10 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 
 - [x] User logs in to their Youtube account
 - [x] User accesses their unwatched subscription content
-- [ ] Display unwatched subscription content in table view
+- [x] Display unwatched subscription content in table view
 - [ ] User watches the videos
 - [x] User sets the watch time limit
-- [ ] User swipe to unsubscribe/ remove video from list
+- [x] User swipe to unsubscribe/ remove video from list
 - [ ] Notification when time's up
 - [ ] Up next playlist
 
