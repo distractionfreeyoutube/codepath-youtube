@@ -42,6 +42,12 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 * Settings (colour scheme, etc.)
 * Chat window/ community page to interact with fellow users who are trying to recover from Youtube addiction/ reduce screentime
 
+#### Progress 3
+
+User can access subscription videos and delete them.
+
+![](https://i.imgur.com/7cYcB31.gif)
+
 #### Progress 2
 
 User can set timer for watching videos on their Youtube account.
