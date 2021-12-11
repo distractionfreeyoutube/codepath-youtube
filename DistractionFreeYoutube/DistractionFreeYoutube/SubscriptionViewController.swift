@@ -76,6 +76,14 @@ class SubscriptionViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.videosNames.remove(at: indexPath.row)
+            self.thumbnailLinks.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     @available(iOS 15.0.0, *)
     func getSubscriptions() async throws -> [String] {
         var returnChannelsId = [String]()
