@@ -1,8 +1,9 @@
-platform :ios, '8.0'
+platform :ios, '12.0'
 use_frameworks!
 target ‘DistractionFreeYoutube’ do
     pod 'GoogleAPIClientForREST/YouTube', '~> 1.2.1'
     pod 'Google/SignIn', '~> 3.0.3'
+    pod "youtube-ios-player-helper", "~> 1.0.4"
 end
 
 post_install do |installer|

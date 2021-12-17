@@ -19,6 +19,7 @@
 		866E05DD274958C700537C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866E05DC274958C700537C8D /* Assets.xcassets */; };
 		866E05E0274958C700537C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866E05DE274958C700537C8D /* LaunchScreen.storyboard */; };
 		86CE235E27495BD80078DEF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86CE235D27495BD80078DEF0 /* GoogleService-Info.plist */; };
+		86EF97DA276C2CAA003254A1 /* YoutubePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF97D9276C2CAA003254A1 /* YoutubePlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		866E05DF274958C700537C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		866E05E1274958C700537C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86CE235D27495BD80078DEF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		86EF97D9276C2CAA003254A1 /* YoutubePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubePlayerViewController.swift; sourceTree = "<group>"; };
 		CEFBF220AF651494D1258540 /* Pods-DistractionFreeYoutube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistractionFreeYoutube.release.xcconfig"; path = "Target Support Files/Pods-DistractionFreeYoutube/Pods-DistractionFreeYoutube.release.xcconfig"; sourceTree = "<group>"; };
 		E58BAB13A318DBE5A1EB7573 /* Pods-DistractionFreeYoutube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistractionFreeYoutube.debug.xcconfig"; path = "Target Support Files/Pods-DistractionFreeYoutube/Pods-DistractionFreeYoutube.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				865A5F2827541C53007882AB /* SubscriptionViewController.swift */,
 				865A5F2A27541C66007882AB /* TimerViewController.swift */,
 				865A5F2C2754426F007882AB /* VideoTableViewCell.swift */,
+				86EF97D9276C2CAA003254A1 /* YoutubePlayerViewController.swift */,
 			);
 			path = DistractionFreeYoutube;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86EF97DA276C2CAA003254A1 /* YoutubePlayerViewController.swift in Sources */,
 				865A5F2B27541C66007882AB /* TimerViewController.swift in Sources */,
 				866E05D8274958C700537C8D /* ViewController.swift in Sources */,
 				866E05D4274958C700537C8D /* AppDelegate.swift in Sources */,

@@ -16,6 +16,7 @@ class SubscriptionViewController: UIViewController, UITableViewDataSource, UITab
     var videosNames = [String]()
     var channelNames = [String]()
     var thumbnailLinks = [String]()
+    var videoIds = [String]()
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -76,6 +77,19 @@ class SubscriptionViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let destinationViewController = segue.destination as! YoutubePlayerViewController
+        destinationViewController.videoId = videoIds[indexPath.row]
+        destinationViewController.videoName = videosNames[indexPath.row]
+        destinationViewController.channelName = channelNames[indexPath.row]
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.videosNames.remove(at: indexPath.row)
@@ -134,9 +148,17 @@ class SubscriptionViewController: UIViewController, UITableViewDataSource, UITab
                 let videosThumbnail = videosSnippet["thumbnails"] as! [String:Any]
                 let videoThumbnailDefault = videosThumbnail["default"] as! [String:Any]
                 thumbnailLinks.append(videoThumbnailDefault["url"] as! String)
+                
+                let id = videosItem["id"] as! [String:Any]
+                videoIds.append(id["videoId"] as! String)
             }
         }
         return returnVideosName
+    }
+    
+    // Restrict orientation change
+    override var shouldAutorotate: Bool {
+        return false
     }
     
     enum SubscriptionsFetchError: Error {

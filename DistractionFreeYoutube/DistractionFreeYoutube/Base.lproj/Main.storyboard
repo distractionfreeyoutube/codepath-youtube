@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -112,6 +112,7 @@ experience of Youtube</string>
                                             <outlet property="channelNameLabel" destination="vC9-Im-bQL" id="1rl-Vv-BUp"/>
                                             <outlet property="thumbnailImageView" destination="yaY-Rc-obU" id="bBR-cE-f2m"/>
                                             <outlet property="videoNameLabel" destination="3Qy-aG-wxI" id="WFY-GJ-z3x"/>
+                                            <segue destination="qcb-XO-auu" kind="show" id="mfa-KX-olU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -133,7 +134,68 @@ experience of Youtube</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dY1-5F-if6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2813.5999999999999" y="-166.99507389162562"/>
+            <point key="canvasLocation" x="2813.04347826087" y="-167.11956521739131"/>
+        </scene>
+        <!--Youtube Player View Controller-->
+        <scene sceneID="9on-7q-AWb">
+            <objects>
+                <viewController id="qcb-XO-auu" customClass="YoutubePlayerViewController" customModule="DistractionFreeYoutube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e67-d4-JdR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFZ-0O-02W" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="233"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eFZ-0O-02W" secondAttribute="height" multiplier="16:9" id="SJ3-vF-6hQ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeK-4B-Oec">
+                                <rect key="frame" x="20" y="297" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="yPo-7f-LEt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyq-xc-IFy">
+                                <rect key="frame" x="20" y="365" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Cju-TB-oIp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mnc-hk-g1T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="0.93725490570000003" green="0.52156865600000002" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Mnc-hk-g1T" firstAttribute="trailing" secondItem="WeK-4B-Oec" secondAttribute="trailing" constant="20" id="3N6-iu-Lej"/>
+                            <constraint firstItem="xyq-xc-IFy" firstAttribute="leading" secondItem="Mnc-hk-g1T" secondAttribute="leading" constant="20" id="5ss-7M-65j"/>
+                            <constraint firstItem="eFZ-0O-02W" firstAttribute="leading" secondItem="Mnc-hk-g1T" secondAttribute="leading" id="GUc-3e-1m0"/>
+                            <constraint firstItem="Mnc-hk-g1T" firstAttribute="trailing" secondItem="xyq-xc-IFy" secondAttribute="trailing" constant="20" id="Obu-lm-dsl"/>
+                            <constraint firstItem="eFZ-0O-02W" firstAttribute="top" secondItem="Mnc-hk-g1T" secondAttribute="top" id="QWW-QB-0qn"/>
+                            <constraint firstItem="WeK-4B-Oec" firstAttribute="leading" secondItem="Mnc-hk-g1T" secondAttribute="leading" constant="20" id="VOo-PX-kPW"/>
+                            <constraint firstItem="xyq-xc-IFy" firstAttribute="top" secondItem="WeK-4B-Oec" secondAttribute="bottom" constant="8" id="iK8-ED-Pnj"/>
+                            <constraint firstItem="eFZ-0O-02W" firstAttribute="trailing" secondItem="Mnc-hk-g1T" secondAttribute="trailing" id="ld9-Bn-g33"/>
+                            <constraint firstItem="WeK-4B-Oec" firstAttribute="top" secondItem="eFZ-0O-02W" secondAttribute="bottom" constant="20" id="tWu-0H-aML"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="idm-Tr-Ygd"/>
+                    <connections>
+                        <outlet property="backButton" destination="idm-Tr-Ygd" id="Ue4-zK-ibN"/>
+                        <outlet property="channelNameLabel" destination="xyq-xc-IFy" id="RKg-Fy-ThL"/>
+                        <outlet property="playerView" destination="eFZ-0O-02W" id="sre-zm-yCY"/>
+                        <outlet property="videoNameLabel" destination="WeK-4B-Oec" id="gkp-IK-cNn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEi-CR-hC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3757.971014492754" y="-166.30434782608697"/>
         </scene>
         <!--TimerViewController-->
         <scene sceneID="OeI-7H-2Xw">
@@ -306,10 +368,14 @@ experience of Youtube</string>
             <point key="canvasLocation" x="1872.8" y="550.49261083743841"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.93725490570000003" green="0.52156865600000002" blue="0.49019610879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="open-doodles-meditating-1" width="120" height="92"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <image name="video" catalog="system" width="128" height="83"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
