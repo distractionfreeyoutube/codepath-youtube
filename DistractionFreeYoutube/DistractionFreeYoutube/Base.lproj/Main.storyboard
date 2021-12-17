@@ -213,9 +213,8 @@ experience of Youtube</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLw-Xq-JAR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLw-Xq-JAR">
                                 <rect key="frame" x="181" y="258" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -238,7 +237,7 @@ experience of Youtube</string>
                                 <rect key="frame" x="162" y="423" width="86" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="xdo-HW-j7d"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="86" id="xdo-HW-j7d"/>
                                 </constraints>
                                 <state key="normal" title="Set TImer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -247,28 +246,26 @@ experience of Youtube</string>
                                     <action selector="setTimer:" destination="WXm-Y6-EBm" eventType="touchUpInside" id="k6k-fz-NyO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEi-Tt-fcm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEi-Tt-fcm">
                                 <rect key="frame" x="262" y="388" width="28" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLt-r2-fMW">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aLt-r2-fMW">
                                 <rect key="frame" x="157" y="381" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DsR-e2-bL6">
-                                <rect key="frame" x="345" y="629" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DsR-e2-bL6">
+                                <rect key="frame" x="343" y="629" width="51" height="31"/>
                                 <color key="onTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="switchDidChange:" destination="WXm-Y6-EBm" eventType="valueChanged" id="szM-dw-m0u"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ringer On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWy-DI-j9i">
-                                <rect key="frame" x="261" y="634" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ringer On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWy-DI-j9i">
+                                <rect key="frame" x="246" y="634" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -278,18 +275,24 @@ experience of Youtube</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="bottom" secondItem="DsR-e2-bL6" secondAttribute="bottom" constant="27" id="3FL-Xg-IQB"/>
-                            <constraint firstItem="HdU-5V-FBp" firstAttribute="top" secondItem="vsg-VM-ePW" secondAttribute="bottom" constant="51" id="6FK-EM-CIb"/>
+                            <constraint firstItem="vsg-VM-ePW" firstAttribute="top" secondItem="DEi-Tt-fcm" secondAttribute="bottom" constant="14" id="85a-Bp-5OS"/>
+                            <constraint firstItem="HdU-5V-FBp" firstAttribute="top" secondItem="vsg-VM-ePW" secondAttribute="bottom" constant="51" id="BEw-4M-tdq"/>
                             <constraint firstItem="HdU-5V-FBp" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="192" id="Czt-VB-OC7"/>
                             <constraint firstItem="DsR-e2-bL6" firstAttribute="leading" secondItem="SWy-DI-j9i" secondAttribute="trailing" constant="8" symbolic="YES" id="IBJ-op-x9A"/>
+                            <constraint firstItem="SWy-DI-j9i" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="246" id="JRV-AP-n4L"/>
+                            <constraint firstItem="DEi-Tt-fcm" firstAttribute="leading" secondItem="aLt-r2-fMW" secondAttribute="trailing" constant="8" symbolic="YES" id="JYT-zG-etV"/>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="vsg-VM-ePW" secondAttribute="trailing" constant="166" id="L0B-an-1sh"/>
-                            <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="aCj-hT-6bM" secondAttribute="trailing" constant="184" id="Nps-iT-Lsx"/>
+                            <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="DEi-Tt-fcm" secondAttribute="trailing" constant="124" id="Mg8-mr-Cat"/>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="DsR-e2-bL6" secondAttribute="trailing" constant="22" id="PiT-bn-ZuE"/>
-                            <constraint firstItem="SWy-DI-j9i" firstAttribute="top" secondItem="aCj-hT-6bM" secondAttribute="bottom" constant="62" id="Sa3-Lh-T5r"/>
+                            <constraint firstItem="rLw-Xq-JAR" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="181" id="Q2u-FU-jKX"/>
                             <constraint firstItem="aCj-hT-6bM" firstAttribute="top" secondItem="HdU-5V-FBp" secondAttribute="bottom" constant="8" symbolic="YES" id="WBs-jg-SUy"/>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="HdU-5V-FBp" secondAttribute="trailing" constant="192" id="Xkj-g5-Nvo"/>
                             <constraint firstItem="aCj-hT-6bM" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="188" id="ZGU-60-Rkk"/>
                             <constraint firstItem="vsg-VM-ePW" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="162" id="aYt-6L-K1e"/>
-                            <constraint firstItem="SWy-DI-j9i" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="261" id="iSU-1a-VoE"/>
+                            <constraint firstItem="aLt-r2-fMW" firstAttribute="top" secondItem="rLw-Xq-JAR" secondAttribute="bottom" constant="102" id="h3p-WL-Y0x"/>
+                            <constraint firstItem="vsg-VM-ePW" firstAttribute="top" secondItem="aLt-r2-fMW" secondAttribute="bottom" constant="8" symbolic="YES" id="iag-zW-yX5"/>
+                            <constraint firstItem="aLt-r2-fMW" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="157" id="ky0-Eo-bvj"/>
+                            <constraint firstItem="DEi-Tt-fcm" firstAttribute="top" secondItem="rLw-Xq-JAR" secondAttribute="bottom" constant="109" id="sLR-7D-hbk"/>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="bottom" secondItem="SWy-DI-j9i" secondAttribute="bottom" constant="32" id="tBm-FI-Rwg"/>
                             <constraint firstItem="DsR-e2-bL6" firstAttribute="top" secondItem="aCj-hT-6bM" secondAttribute="bottom" constant="57" id="wwE-Lf-0IP"/>
                         </constraints>
