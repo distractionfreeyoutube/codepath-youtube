@@ -151,8 +151,8 @@ experience of Youtube</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLw-Xq-JAR">
-                                <rect key="frame" x="181" y="258" width="53" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLw-Xq-JAR">
+                                <rect key="frame" x="180.30199459368896" y="257" width="53.000000000000227" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -215,6 +215,7 @@ experience of Youtube</string>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="bottom" secondItem="DsR-e2-bL6" secondAttribute="bottom" constant="27" id="3FL-Xg-IQB"/>
                             <constraint firstItem="vsg-VM-ePW" firstAttribute="top" secondItem="DEi-Tt-fcm" secondAttribute="bottom" constant="14" id="85a-Bp-5OS"/>
                             <constraint firstItem="HdU-5V-FBp" firstAttribute="top" secondItem="vsg-VM-ePW" secondAttribute="bottom" constant="51" id="BEw-4M-tdq"/>
+                            <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="rLw-Xq-JAR" secondAttribute="trailing" constant="180.69800540631081" id="CDI-GI-vXd"/>
                             <constraint firstItem="HdU-5V-FBp" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="192" id="Czt-VB-OC7"/>
                             <constraint firstItem="DsR-e2-bL6" firstAttribute="leading" secondItem="SWy-DI-j9i" secondAttribute="trailing" constant="8" symbolic="YES" id="IBJ-op-x9A"/>
                             <constraint firstItem="SWy-DI-j9i" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="246" id="JRV-AP-n4L"/>
@@ -222,7 +223,6 @@ experience of Youtube</string>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="vsg-VM-ePW" secondAttribute="trailing" constant="166" id="L0B-an-1sh"/>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="DEi-Tt-fcm" secondAttribute="trailing" constant="124" id="Mg8-mr-Cat"/>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="DsR-e2-bL6" secondAttribute="trailing" constant="22" id="PiT-bn-ZuE"/>
-                            <constraint firstItem="rLw-Xq-JAR" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="181" id="Q2u-FU-jKX"/>
                             <constraint firstItem="aCj-hT-6bM" firstAttribute="top" secondItem="HdU-5V-FBp" secondAttribute="bottom" constant="8" symbolic="YES" id="WBs-jg-SUy"/>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="trailing" secondItem="HdU-5V-FBp" secondAttribute="trailing" constant="192" id="Xkj-g5-Nvo"/>
                             <constraint firstItem="aCj-hT-6bM" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="188" id="ZGU-60-Rkk"/>
@@ -230,6 +230,7 @@ experience of Youtube</string>
                             <constraint firstItem="aLt-r2-fMW" firstAttribute="top" secondItem="rLw-Xq-JAR" secondAttribute="bottom" constant="102" id="h3p-WL-Y0x"/>
                             <constraint firstItem="vsg-VM-ePW" firstAttribute="top" secondItem="aLt-r2-fMW" secondAttribute="bottom" constant="8" symbolic="YES" id="iag-zW-yX5"/>
                             <constraint firstItem="aLt-r2-fMW" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="157" id="ky0-Eo-bvj"/>
+                            <constraint firstItem="rLw-Xq-JAR" firstAttribute="leading" secondItem="2Bi-4L-ZY8" secondAttribute="leading" constant="180.30199459368896" id="rdx-71-8Pn"/>
                             <constraint firstItem="DEi-Tt-fcm" firstAttribute="top" secondItem="rLw-Xq-JAR" secondAttribute="bottom" constant="109" id="sLR-7D-hbk"/>
                             <constraint firstItem="2Bi-4L-ZY8" firstAttribute="bottom" secondItem="SWy-DI-j9i" secondAttribute="bottom" constant="32" id="tBm-FI-Rwg"/>
                             <constraint firstItem="DsR-e2-bL6" firstAttribute="top" secondItem="aCj-hT-6bM" secondAttribute="bottom" constant="57" id="wwE-Lf-0IP"/>
