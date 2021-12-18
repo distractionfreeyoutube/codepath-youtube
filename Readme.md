@@ -1,7 +1,7 @@
 README
 ===
 
-# Distraction-free Youtube (tbc)
+# Distraction-free Youtube
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -30,17 +30,24 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 - [x] User logs in to their Youtube account
 - [x] User accesses their unwatched subscription content
 - [x] Display unwatched subscription content in table view
-- [ ] User watches the videos
+- [x] User watches the videos
 - [x] User sets the watch time limit
 - [x] User swipe to unsubscribe/ remove video from list
-- [ ] Notification when time's up
-- [ ] Up next playlist
+- [x] Notification when time's up
 
 **Optional Nice-to-have Stories**
 
 * Profile Page
 * Settings (colour scheme, etc.)
 * Chat window/ community page to interact with fellow users who are trying to recover from Youtube addiction/ reduce screentime
+* Up next playlist
+
+#### Progress 4
+Timer progress ring animation + notification (alarm ring/vibration) when time's up + user can watch the videos
+![](https://i.imgur.com/Cnwsy1c.gif)
+![](https://i.imgur.com/b8iQeFW.gif)
+![](https://i.imgur.com/0KNSBGj.gif)
+
 
 #### Progress 3
 
@@ -235,3 +242,4 @@ User can login to their Google/ Youtube account, and they can view the titles of
     `POST`   | /subscriptions | adds a subscription for the authenticated user's channel
     `DELETE` | /subscriptions | deletes a subscription 
     `GET`    | /videos | returns a list of videos that match the API request parameters
+
