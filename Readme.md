@@ -43,9 +43,10 @@ Our app removes distracting elements of Youtube while keeping those that makes Y
 * Up next playlist
 
 #### Progress 4
-Notification when time's up + user can watch the videos
+Timer progress ring animation + notification (alarm ring/vibration) when time's up + user can watch the videos
 ![](https://i.imgur.com/Cnwsy1c.gif)
 ![](https://i.imgur.com/b8iQeFW.gif)
+![](https://i.imgur.com/7bNPwos.gif)
 
 
 #### Progress 3
